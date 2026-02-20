@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Min första webbsida</title>
+    <title>Nummer-sparare</title>
 </head>
 <body>
-    <h1>Hej världen!</h1>
-    <p>Det här är min första HTML-fil på GitHub!</p>
+    <h1>Skriv in en siffra</h1>
+    <form method="POST">
+        <input type="number" name="number" required>
+        <button type="submit">Spara</button>
+    </form>
+
+    <h2>Alla sparade siffror:</h2>
+    <ul>
+    {% for n in numbers %}
+        <li>{{ n.value }}</li>
+    {% endfor %}
+    </ul>
 </body>
 </html>
